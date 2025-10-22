@@ -34,7 +34,7 @@ fun NavGraph(modifier: Modifier = Modifier) {
 
     // Determine if the bottom bar should be shown
     val showBottomBar = when (backStack.lastOrNull()) {
-        Login, is Items, ItemDetails -> false // Screens WITHOUT a bottom bar
+        Login -> false // Screens WITHOUT a bottom bar
         else -> true // Screens WITH a bottom bar (Category, Settings, etc.)
     }
 

@@ -1,5 +1,6 @@
 package com.example.thefinal.feature.items.ui.screen
 
+import android.util.Log
 import android.widget.Space
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -60,6 +61,7 @@ fun CategoryScreen(modifier: Modifier,navigateToItemScreen: (cat:String) -> Unit
         modifier = Modifier.fillMaxSize(),
         floatingActionButton = {
             FloatingActionButton(onClick = {
+                Log.d("aaaaaaaaaaaaaaaa","aaaa")
                 addItemDialog = true
             }) {
                 Icon(imageVector = Icons.Default.Add, contentDescription = "Add")
@@ -104,10 +106,10 @@ fun CategoryScreen(modifier: Modifier,navigateToItemScreen: (cat:String) -> Unit
                 }
             }
         }
-        if (addItemDialog) {
-            AddItem(onDismissRequest = { addItemDialog = false }, itemListViewModel = itemListViewModel)
-        }
-        }
 
+        }
+            if (addItemDialog) {
+                AddItem(onDismissRequest = { addItemDialog = false }, itemListViewModel = itemListViewModel)
+            }
     }
 }}
